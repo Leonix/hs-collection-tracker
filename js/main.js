@@ -407,7 +407,7 @@ var HSCollectionTracker = (function() {
 			// Listen to mouse events and init tooltips on the fly
 			$(document.body).on('mouseover', '#classCards li a', function(evt) {
 				var $a = $(this);
-				if ($a.hasClass('buttonAll')) {
+				if ($a.hasClass('buttonAll') || $a.attr('data-tooltip-href')) {
 					return;
 				}
 				var card_name = $a.text();
